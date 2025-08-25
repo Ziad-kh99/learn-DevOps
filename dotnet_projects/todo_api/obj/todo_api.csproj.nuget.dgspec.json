@@ -52,6 +52,10 @@
             "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
               "version": "[9.0.8, )"
+            },
+            "NSwag.AspNetCore": {
+              "target": "Package",
+              "version": "[14.5.0, )"
             }
           },
           "imports": [
