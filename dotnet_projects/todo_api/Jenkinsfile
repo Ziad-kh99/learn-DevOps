@@ -10,6 +10,7 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 git branch: 'todo-api-v1', url: 'https://github.com/Ziad-kh99/learn-DevOps.git'
+                sh 'pwd'
                 sh 'ls -R'
             }
         }
