@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+
+    options {
+        ansiColor('xterm')
+        timestamps()
+    }
+
+    environment {
+        APP_NAME = 'todo-api'
+        DOCKER_NS = 'ziadkh'
+        IMAGE_REPO = "${env.DOCKER_NS}/${env.APP_NAME}"
+        GIT_SHORT = "${env.GIT_COMMIT?.take(7)}"
+        
+    }
+}
