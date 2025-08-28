@@ -25,7 +25,11 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry('https://index.docker.io/v1/', 'dockerhub') {
-                        docker.image("${IMAGE_NAME}:${IMAGE_TAG}").push()
+                        def app = docker.image("${IMAGE_NAME}:${IMAGE_TAG}")
+                        sh "docker images"
+                        app.push()
+                        app.push("latest")
+                        // docker.image("${IMAGE_NAME}:${IMAGE_TAG}").push()
                     }
                 }
             }
