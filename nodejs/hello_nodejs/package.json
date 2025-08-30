@@ -1,0 +1,11 @@
+{
+    "name": "hello-node",
+    "version": "1.0.0",
+    "description": "Minimal hello nodejs service",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "test": "node -e \"console.log('no tests yet');\""
+    },
+    "license": "MIT"
+}
