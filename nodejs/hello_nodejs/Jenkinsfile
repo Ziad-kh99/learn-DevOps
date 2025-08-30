@@ -15,10 +15,7 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                sh '''
-                    set -euxo pipefial
-                    npm ci
-                '''
+                sh 'npm ci'
             }
         }
 
